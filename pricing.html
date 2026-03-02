@@ -3,60 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | The Remote RM</title>
+    <title>Pricing & Packages | The Remote RM</title>
     <style>
-        :root { --primary: #002d5b; --accent: #007bff; --bg: #f0f4f8; --white: #ffffff; --text: #2d3436; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); margin: 0; color: var(--text); line-height: 1.7; }
-        header { background: var(--white); padding: 1.2rem 0; border-bottom: 3px solid var(--primary); position: sticky; top: 0; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.5rem; letter-spacing: -1px; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 700; margin-left: 2rem; }
-        .pricing-box { background: var(--white); border-radius: 20px; padding: 4rem; margin: 60px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
-        h2 { font-size: 2.2rem; color: var(--primary); text-align: center; margin-bottom: 3rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { border: 1px solid #e1e8f0; padding: 3rem; border-radius: 15px; text-align: center; background: #f8fbff; transition: 0.3s; }
-        .featured { border: 2px solid var(--accent); transform: scale(1.05); background: white; box-shadow: 0 10px 30px rgba(0,123,255,0.1); }
-        .price { font-size: 2.8rem; font-weight: 800; color: var(--primary); margin: 1.5rem 0; }
-        .btn { background: var(--accent); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 700; display: block; margin-top: 2rem; }
-        footer { background: var(--primary); color: white; padding: 3rem 0; text-align: center; }
+        :root {
+            --primary: #002d5b;
+            --accent: #007bff;
+            --bg: #f0f4f8;
+            --text: #2d3436;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--bg);
+        }
+
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            margin-left: 2rem;
+        }
+
+        .pricing-header {
+            padding: 80px 0 40px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 60px;
+        }
+
+        .price-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 45, 91, 0.08);
+            border: 1px solid rgba(0, 45, 91, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--accent);
+            position: relative;
+        }
+
+        .featured-tag {
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 1.5rem 0;
+        }
+
+        .price span { font-size: 1rem; opacity: 0.6; }
+
+        ul.features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        ul.features li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul.features li::before {
+            content: "✓";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: block;
+            border: none;
+        }
+
+        footer { background: var(--primary); color: white; padding: 3rem 0; text-align: center; margin-top: 60px; }
+
+        @media (max-width: 768px) {
+            .grid-3 { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">The Remote RM</a>
-            <nav><a href="index.html">Home</a><a href="pricing.html">Pricing</a></nav>
-        </div>
-    </header>
-    <div class="container">
-        <section class="pricing-box">
-            <h2>Investment in Excellence</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Registration</h3>
-                    <div class="price">£950+</div>
-                    <p>New Provider or Manager Setup. Drafting of Statement of Purpose and Interview Prep.</p>
-                    <a href="index.html#contact" class="btn" style="background: var(--primary);">Enquire</a>
-                </div>
-                <div class="card featured">
-                    <div style="color: var(--accent); font-weight: bold; margin-bottom: 10px;">MOST POPULAR</div>
-                    <h3>Mock Inspection</h3>
-                    <div class="price">£850+</div>
-                    <p>Full Remote Readiness Audit mapped to CQC Single Assessment Framework.</p>
-                    <a href="index.html#contact" class="btn">Select Package</a>
-                </div>
-                <div class="card">
-                    <h3>Retainer</h3>
-                    <div class="price">£350/mo</div>
-                    <p>Ongoing Compliance Partnering, Safeguarding Advice, and Monthly Healthchecks.</p>
-                    <a href="index.html#contact" class="btn" style="background: var(--primary);">Subscribe</a>
-                </div>
-            </div>
-        </section>
+
+<header>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="The Remote RM Logo" style="height: 100px; width: auto; vertical-align: middle;">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact" class="btn" style="display: inline-block;">Enquire Now</a>
+        </nav>
     </div>
-    <footer>
-        <p>&copy; 2026 The Remote RM</p>
-    </footer>
+</header>
+
+<section class="pricing-header">
+    <div class="container">
+        <h1>Support Packages</h1>
+        <p>Expert CQC compliance tailored to your service’s needs.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="grid-3">
+        <div class="price-card">
+            <h3>Essential</h3>
+            <p>Perfect for established services needing a health check.</p>
+            <div class="price">£495<span>/audit</span></div>
+            <ul class="features">
+                <li>Remote Document Review</li>
+                <li>Single Assessment Framework Mapping</li>
+                <li>Digital Action Plan</li>
+                <li>1-Hour Manager Feedback Call</li>
+            </ul>
+            <a href="index.html#contact" class="btn">Select Essential</a>
+        </div>
+
+        <div class="price-card featured">
+            <div class="featured-tag">MOST POPULAR</div>
+            <h3>Compliance Pro</h3>
+            <p>Comprehensive support for Mock Inspections.</p>
+            <div class="price">£950<span>/audit</span></div>
+            <ul class="features">
+                <li>Full Remote Mock Inspection</li>
+                <li>Staff Virtual Interviews</li>
+                <li>Evidence Folder Audit</li>
+                <li>Priority Safeguarding Advice</li>
+                <li>Post-Inspection Support (30 days)</li>
+            </ul>
+            <a href="index.html#contact" class="btn">Select Pro</a>
+        </div>
+
+        <div class="price-card">
+            <h3>Registration</h3>
+            <p>For new providers entering the market.</p>
+            <div class="price">£1,200<span>/service</span></div>
+            <ul class="features">
+                <li>Portal Application Support</li>
+                <li>Statement of Purpose Review</li>
+                <li>Registered Manager Interview Prep</li>
+                <li>Policy Suite Guidance</li>
+            </ul>
+            <a href="index.html#contact" class="btn">Select Registration</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p><strong>The Remote RM</strong> | Expertise. Evidence. Excellence.</p>
+        <p style="opacity: 0.6; font-size: 0.8rem; margin-top: 1rem;">&copy; 2026 The Remote RM. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
