@@ -19,6 +19,7 @@
             color: var(--text);
             line-height: 1.7;
             background-color: var(--bg);
+            scroll-behavior: smooth;
         }
 
         header {
@@ -42,14 +43,19 @@
             align-items: center;
         }
 
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo img { height: 80px; width: auto; vertical-align: middle; }
+
+        nav { display: flex; align-items: center; }
 
         nav a {
             text-decoration: none;
             color: var(--text);
             font-weight: 600;
-            margin-left: 2rem;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
         }
+
+        nav a:hover { color: var(--accent); }
 
         .hero {
             padding: 120px 0;
@@ -59,7 +65,6 @@
             background-position: center;
             color: white;
             text-align: center;
-            margin-bottom: 40px;
         }
 
         .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; }
@@ -69,24 +74,27 @@
             background: var(--white);
             border-radius: 15px;
             padding: 4rem;
-            margin-bottom: 40px;
+            margin: 40px 0;
             box-shadow: 0 10px 30px rgba(0, 45, 91, 0.08);
             border: 1px solid rgba(0, 45, 91, 0.1);
         }
 
         .btn {
             background: var(--accent);
-            color: white;
-            padding: 1rem 2.5rem;
+            color: white !important;
+            padding: 0.8rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
             border: none;
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        h2 { font-size: 2rem; color: var(--primary); margin-top: 0; border-left: 5px solid var(--accent); padding-left: 15px; }
+        .btn:hover { transform: scale(1.05); }
+
+        h2 { font-size: 2.2rem; color: var(--primary); margin-top: 0; border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 1.5rem; }
 
         .grid-3 {
             display: grid;
@@ -107,13 +115,10 @@
         .about-img { flex: 1; min-width: 300px; }
         .about-img img { width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .full-width-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 2.5rem;
-        }
+        .advantage-section { background: var(--primary); color: white; }
+        .advantage-section h2 { color: white; border-left-color: var(--accent); }
+        .advantage-card { background: rgba(255,255,255,0.1); border: none; color: white; }
+        .advantage-card h3 { color: var(--accent); margin-top: 0; }
 
         .form-control {
             width: 100%; padding: 0.8rem; margin: 0.5rem 0 1.5rem;
@@ -121,12 +126,14 @@
             font-family: inherit;
         }
 
-        footer { background: var(--primary); color: white; padding: 3rem 0; text-align: center; }
+        footer { background: var(--primary); color: white; padding: 4rem 0; text-align: center; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .content-box { padding: 2rem; }
-            nav a { margin-left: 1rem; font-size: 0.9rem; }
+            .nav-flex { flex-direction: column; gap: 1rem; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 0.5rem; }
         }
     </style>
 </head>
@@ -135,14 +142,14 @@
 <header>
     <div class="container nav-flex">
         <a href="index.html" class="logo">
-            <img src="logo.png" alt="The Remote RM Logo" style="height: 100px; width: auto; vertical-align: middle;">
+            <img src="logo.png" alt="The Remote RM Logo">
         </a>
         <nav>
             <a href="#about">Approach</a>
             <a href="#services">Services</a>
-            <a href="training.html">Mentorship</a> <a href="#contact">Contact</a>
-</nav>
-            <a href="pricing.html" class="btn">View Packages</a>
+            <a href="training.html">Mentorship</a> 
+            <a href="#contact">Contact</a>
+            <a href="pricing.html" class="btn" style="margin-left: 1.5rem;">View Packages</a>
         </nav>
     </div>
 </header>
@@ -151,7 +158,7 @@
     <div class="container">
         <h1>CQC Compliance. Zero Disruption.</h1>
         <p>Expert-led remote support for care providers who want excellence without the on-site footprint.</p>
-        <a href="#contact" class="btn">Enquire Now</a>
+        <a href="#contact" class="btn" style="padding: 1rem 2.5rem;">Enquire Now</a>
     </div>
 </section>
 
@@ -162,31 +169,32 @@
                 <h2>Expert. Registered. Remote.</h2>
                 <p>As a <strong>former Registered Manager and Care Business Owner</strong> with over 20 years in the sector, I founded The Remote RM to protect your service rating without invading your premises.</p>
                 <p>We leverage secure digital tools to evaluate your service, ensuring you are 100% CQC-ready without the disruption to your staff and residents that traditional consultancy brings.</p>
-                <ul style="list-style: none; padding: 0;">
+                <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
                     <li>✔️ 20+ Years Frontline Leadership</li>
                     <li>✔️ Specialist in Safeguarding</li>
                     <li>✔️ Expert in Single Assessment Framework</li>
-                    <section class="content-box" style="background: var(--primary); color: white;">
-    <h2 style="color: white; border-left-color: var(--accent);">The Remote Advantage</h2>
-    <div class="grid-3">
-        <div class="inner-card" style="background: rgba(255,255,255,0.1); border: none; color: white;">
-            <h3 style="color: var(--accent);">Lower Overheads</h3>
-            <p>By removing travel, accommodation, and on-site downtime, I pass 100% of those savings directly to you. You pay for expertise, not expenses.</p>
-        </div>
-        <div class="inner-card" style="background: rgba(255,255,255,0.1); border: none; color: white;">
-            <h3 style="color: var(--accent);">Standard-Led</h3>
-            <p>The CQC is shifting to "continuous monitoring" and remote data collection. My remote audits mirror their new methodology, preparing you for the future of regulation.</p>
-        </div>
-        <div class="inner-card" style="background: rgba(255,255,255,0.1); border: none; color: white;">
-            <h3 style="color: var(--accent);">Zero Disturbance</h3>
-            <p>No inspectors in the hallways. No taking over the manager's office. Your team continues to provide care while I provide the scrutiny.</p>
-        </div>
-    </div>
-</section>
                 </ul>
             </div>
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Consultant at work">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box advantage-section">
+        <h2>The Remote Advantage</h2>
+        <div class="grid-3">
+            <div class="inner-card advantage-card">
+                <h3>Lower Overheads</h3>
+                <p>By removing travel, accommodation, and on-site downtime, I pass 100% of those savings directly to you. You pay for expertise, not expenses.</p>
+            </div>
+            <div class="inner-card advantage-card">
+                <h3>Standard-Led</h3>
+                <p>The CQC is shifting to remote data collection. My remote audits mirror their new methodology, preparing you for the future of regulation.</p>
+            </div>
+            <div class="inner-card advantage-card">
+                <h3>Zero Disturbance</h3>
+                <p>No inspectors in the hallways. No taking over the manager's office. Your team continues to provide care while I provide the scrutiny.</p>
             </div>
         </div>
     </section>
@@ -267,10 +275,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
