@@ -34,6 +34,183 @@
 
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
         .logo img { height: 80px; width: auto; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 600; margin-left: 1.5rem; transition: color 0.3s;}
+        nav a:hover { color: var(--accent); }
+
+        .about-hero {
+            padding: 80px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .content-box {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 4rem;
+            margin: -40px 0 40px;
+            box-shadow: 0 10px 30px rgba(0, 45, 91, 0.1);
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 1.5rem; font-size: 2.2rem; }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: #f8fbff;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e1e8f0;
+        }
+
+        .value-card h3 { color: var(--accent); margin-top: 0; }
+
+        .founder-strip {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .founder-badge-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--accent);
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        footer { background: var(--primary); color: white; padding: 4rem 0; text-align: center; }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .content-box { padding: 2rem; }
+            .founder-strip { flex-direction: column; text-align: center; }
+            .nav-flex { flex-direction: column; gap: 1rem; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo"><img src="logo.png" alt="The Remote RM Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="mentorship.html">Mentorship</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="pricing.html" class="btn" style="margin-left: 1.5rem; color: white !important; background: var(--accent); padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none;">View Packages</a>
+        </nav>
+    </div>
+</header>
+
+<section class="about-hero">
+    <div class="container">
+        <h1>Our Story & Mission</h1>
+        <p>Expert-Led Compliance Built on Decades of Frontline Leadership</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="content-box">
+        <h2>Bridging the Gap Between Regulation & Operations</h2>
+        <p><strong>The Remote RM</strong> was established to provide health and social care providers with an authoritative level of operational scrutiny that traditional consultancies often overlook. We don't just evaluate compliance; we champion a culture of internal safety and transparency through robust quality assurance frameworks and proactive risk management.</p>
+        
+        <p>Our operational approach is rooted in the belief that high-quality care must be supported by structurally sound service delivery and precise data tracking. We act as a strategic bridge between intricate regulatory requirements and daily operational realities, ensuring services are exceptionally prepared for CQC assessments without the administrative burden of on-site consultants.</p>
+
+        <div class="grid-2">
+            <div class="value-card">
+                <h3>Crisis-Grade Precision</h3>
+                <p>Our core framework is informed by deep experience in NHS crisis command and urgent care coordination, ensuring sharp, systematic, and evidence-based decision-making in every audit we deliver.</p>
+            </div>
+            <div class="value-card">
+                <h3>Commercial Intelligence</h3>
+                <p>We understand the business economics of running a care firm. Our leadership integrates hands-on experience in business development, P&L stewardship, and securing tender contracts.</p>
+            </div>
+            <div class="value-card">
+                <h3>Safeguarding Excellence</h3>
+                <p>Led by Level 5 Designated Safeguarding experts, our strategic reviews place the safety, core dignity, and protection of vulnerable individuals at the very top of your compliance agenda.</p>
+            </div>
+            <div class="value-card">
+                <h3>Curriculum Mastery</h3>
+                <p>We extend our compliance knowledge into educational asset design, offering elite policy mapping, training package formulation, and academically sound assessment/exam architectures.</p>
+            </div>
+        </div>
+
+        <div class="founder-strip">
+            <div class="founder-badge-icon">
+                🛡️
+            </div>
+            <div class="founder-info">
+                <h3 style="margin: 0; color: var(--primary);">Led by Sam Jones</h3>
+                <p style="margin: 5px 0 0; font-size: 0.95rem; color: #666;">Founder & Principal Consultant | DSL Level 5 | CQC-Registered Leader</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Sam engineered The Remote RM after over a decade of dedication across healthcare sectors—spanning NHS emergency command operations to establishing and steering a private care company to a clear 'Good' CQC rating across all KLOEs on its first inspection. His cross-functional background ensures your business receives highly specialized oversight.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p><strong>The Remote RM</strong> | Expertise. Evidence. Excellence.</p>
+        <p style="opacity: 0.6; font-size: 0.8rem; margin-top: 1rem;">&copy; 2026 The Remote RM. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Remote RM</title>
+    <style>
+        :root {
+            --primary: #002d5b;
+            --accent: #007bff;
+            --bg: #f0f4f8;
+            --text: #2d3436;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 80px; width: auto; }
         nav a { text-decoration: none; color: var(--text); font-weight: 600; margin-left: 1.5rem; }
         nav a:hover { color: var(--accent); }
 
