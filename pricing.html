@@ -14,6 +14,113 @@
         }
 
         body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 80px; width: auto; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 600; margin-left: 1.5rem; transition: color 0.3s;}
+        nav a:hover { color: var(--accent); }
+
+        .about-hero {
+            padding: 80px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .content-box {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 4rem;
+            margin: -40px 0 40px;
+            box-shadow: 0 10px 30px rgba(0, 45, 91, 0.1);
+            text-align: center;
+        }
+
+        footer { background: var(--primary); color: white; padding: 4rem 0; text-align: center; margin-top: 40px;}
+
+        @media (max-width: 768px) {
+            .content-box { padding: 2rem; }
+            .nav-flex { flex-direction: column; gap: 1rem; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo"><img src="logo.png" alt="The Remote RM Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="mentorship.html">Mentorship</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="pricing.html" class="btn" style="margin-left: 1.5rem; color: white !important; background: var(--accent); padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none;">View Packages</a>
+        </nav>
+    </div>
+</header>
+
+<section class="about-hero">
+    <div class="container">
+        <h1>Consultancy Packages</h1>
+        <p>Transparent, Remote-First Pricing for Health and Social Care Providers</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="content-box">
+        <h2 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; margin-bottom: 2rem;">Tailored Solutions</h2>
+        <p>Because every care service operates with unique requirements, our pricing models are tailored precisely to the scope of your requested audit, policy framework, or educational design project.</p>
+        <p>To request a comprehensive quote for Mock Inspections, SAF Readiness, or Custom Course Writing, please contact us directly via the homepage.</p>
+        <br>
+        <a href="index.html#contact" style="background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">Request a Quote</a>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p><strong>The Remote RM</strong> | Expertise. Evidence. Excellence.</p>
+        <p style="opacity: 0.6; font-size: 0.8rem; margin-top: 1rem;">&copy; 2026 The Remote RM. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages | The Remote RM</title>
+    <style>
+        :root {
+            --primary: #002d5b;
+            --accent: #007bff;
+            --bg: #f0f4f8;
+            --text: #2d3436;
+            --white: #ffffff;
+        }
+
+        body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
             color: var(--text);
