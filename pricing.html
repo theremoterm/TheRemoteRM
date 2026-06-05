@@ -50,7 +50,80 @@
             padding: 4rem;
             margin: -40px 0 40px;
             box-shadow: 0 10px 30px rgba(0, 45, 91, 0.1);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); }
+
+        /* Pricing Card Styles */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: #f8fbff;
+            border: 1px solid #e1e8f0;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 45, 91, 0.1);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            background: var(--white);
+            position: relative;
+        }
+
+        .featured-badge {
+            background: var(--accent);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: uppercase;
+        }
+
+        .pricing-title { color: var(--primary); font-size: 1.5rem; margin-top: 0; margin-bottom: 0.5rem; }
+        .pricing-price { font-size: 2.5rem; font-weight: 800; color: var(--text); margin: 1rem 0; }
+        .pricing-price span { font-size: 1rem; font-weight: normal; color: #666; }
+        .pricing-desc { color: #555; font-size: 0.95rem; margin-bottom: 2rem; min-height: 60px;}
+
+        .feature-list { list-style: none; padding: 0; margin: 0 0 2rem 0; text-align: left; flex-grow: 1; }
+        .feature-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; font-size: 0.95rem; }
+        .feature-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         footer { background: var(--primary); color: white; padding: 4rem 0; text-align: center; margin-top: 40px;}
@@ -83,17 +156,62 @@
 <section class="about-hero">
     <div class="container">
         <h1>Consultancy Packages</h1>
-        <p>Transparent, Remote-First Pricing for Health and Social Care Providers</p>
+        <p>Transparent, Remote-First Support for Health and Social Care Providers</p>
     </div>
 </section>
 
 <div class="container">
     <section class="content-box">
-        <h2 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; margin-bottom: 2rem;">Tailored Solutions</h2>
-        <p>Because every care service operates with unique requirements, our pricing models are tailored precisely to the scope of your requested audit, policy framework, or educational design project.</p>
-        <p>To request a comprehensive quote for Mock Inspections, SAF Readiness, or Custom Course Writing, please contact us directly via the homepage.</p>
-        <br>
-        <a href="index.html#contact" style="background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">Request a Quote</a>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--primary); border: none; padding: 0; margin-bottom: 1rem; font-size: 2.2rem;">Expertise Without the Overheads</h2>
+            <p style="font-size: 1.1rem; color: #555;">By utilizing a fully remote audit and consultation framework, we eliminate travel and accommodation expenses, passing those savings directly to your service.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Package 1 -->
+            <div class="pricing-card">
+                <h3 class="pricing-title">Targeted Review</h3>
+                <div class="pricing-price">£450 <span>/ day rate</span></div>
+                <p class="pricing-desc">Focused remote scrutiny on specific operational areas or individual Quality Statements.</p>
+                <ul class="feature-list">
+                    <li>Review of up to 3 core policies/audits</li>
+                    <li>Analysis of a specific SAF Quality Statement</li>
+                    <li>1-Hour feedback video consultation</li>
+                    <li>High-level summary report</li>
+                </ul>
+                <a href="index.html#contact" class="btn" style="width: 100%; box-sizing: border-box; background: var(--primary);">Enquire</a>
+            </div>
+
+            <!-- Package 2 (Featured) -->
+            <div class="pricing-card featured">
+                <div class="featured-badge">Most Popular</div>
+                <h3 class="pricing-title">Comprehensive SAF Audit</h3>
+                <div class="pricing-price">£1,250 <span>/ complete</span></div>
+                <p class="pricing-desc">A deep-dive digital mock inspection covering all 5 Key Questions to secure your rating.</p>
+                <ul class="feature-list">
+                    <li>Full desktop review of governance frameworks</li>
+                    <li>Remote interviews with the Registered Manager</li>
+                    <li>Digital staff file and care plan sampling</li>
+                    <li>Exhaustive action-plan report aligned to SAF</li>
+                    <li>Post-report strategic consultation</li>
+                </ul>
+                <a href="index.html#contact" class="btn" style="width: 100%; box-sizing: border-box;">Enquire</a>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="pricing-card">
+                <h3 class="pricing-title">Bespoke Design</h3>
+                <div class="pricing-price">POA</div>
+                <p class="pricing-desc">Custom policy drafting, complex curriculum design, or ongoing monthly retainer support.</p>
+                <ul class="feature-list">
+                    <li>From-scratch local policy writing</li>
+                    <li>Bespoke training course & exam formulation</li>
+                    <li>Monthly governance oversight retainers</li>
+                    <li>CQC Fit Person / Registration mentorship</li>
+                </ul>
+                <a href="index.html#contact" class="btn" style="width: 100%; box-sizing: border-box; background: var(--primary);">Get a Quote</a>
+            </div>
+        </div>
     </section>
 </div>
 
