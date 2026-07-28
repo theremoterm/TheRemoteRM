@@ -1,0 +1,162 @@
+```html
+<article style="font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; color: #333;">
+  
+  <h1 style="color: #1a365d; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Navigating the AGNI DoLS Judgment: What Care Providers Need to Know</h1>
+  
+  <p>For over a decade, health and social care professionals have relied on the Cheshire West "acid test" to determine if someone is deprived of their liberty. If a person lacked capacity, was under continuous supervision and control, and was not free to leave, they were deprived of their liberty.</p>
+  
+  <p>However, on 2 June 2026, the Supreme Court handed down a landmark judgment in the <em>Attorney General for Northern Ireland’s reference</em> (AGNI). This ruling effectively overturns Cheshire West, establishing that the "acid test" is too crude and resulted in an over-extensive interpretation of what constitutes a deprivation of liberty.</p>
+  
+  <p>Here is what the shift from the "acid test" to the new AGNI framework means for registered managers, safeguarding leads, and care providers.</p>
+
+  <h2 style="color: #2b6cb0; margin-top: 30px;">The End of the "Acid Test"</h2>
+  
+  <p>The AGNI judgment establishes that a Deprivation of Liberty (DoL) now requires a broader, contextual, and multi-factorial assessment. Decision-makers must look at the person's circumstances as a whole rather than simply applying a narrow checklist. Factors now include the type of care arrangements, their duration, how they are implemented, the nature of the restrictions, and the practical impact on the individual.</p>
+
+  <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+      <tr style="background-color: #f7fafc; border-bottom: 2px solid #cbd5e0; text-align: left;">
+        <th style="padding: 12px;">Feature</th>
+        <th style="padding: 12px;">Cheshire West (Pre-AGNI)</th>
+        <th style="padding: 12px;">AGNI (Post-June 2026)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 12px; font-weight: bold;">Assessment Style</td>
+        <td style="padding: 12px;">Binary checklist ("Acid Test")</td>
+        <td style="padding: 12px;">Contextual, multi-factorial</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 12px; font-weight: bold;">Scope of Application</td>
+        <td style="padding: 12px;">Broad (caught many individuals)</td>
+        <td style="padding: 12px;">Narrower (fewer meet threshold)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 12px; font-weight: bold;">Role of "Happiness"</td>
+        <td style="padding: 12px;">Irrelevant to the objective DoL</td>
+        <td style="padding: 12px;">Highly relevant; can indicate valid consent</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="color: #2b6cb0; margin-top: 30px;">The Role of Consent and "Positive Wishes"</h2>
+  
+  <p>One of the most significant changes under AGNI is the approach to consent. The Supreme Court ruled that even if a person lacks the mental capacity to make decisions about their care and residence under the Mental Capacity Act 2005, they might still not meet the threshold for a deprivation of liberty if they appear content and have a basic level of awareness of their circumstances.</p>
+  
+  <p>If someone is genuinely content with their placement, it is less likely they are being deprived of their liberty. However, if an individual is actively objecting, expressing a wish to leave, or facing severe restrictions like regular physical or chemical restraint, they are much more likely to meet the threshold and require formal safeguards.</p>
+
+  <h2 style="color: #2b6cb0; margin-top: 30px;">Practical Steps for Care Providers</h2>
+  
+  <p>While the scope of what constitutes a DoL has narrowed, the complexity of the assessments has increased.</p>
+  
+  <ol style="margin-bottom: 30px; padding-left: 20px;">
+    <li style="margin-bottom: 10px;"><strong>Do Not Terminate Existing Authorisations Blindly:</strong> Existing DoLS authorisations do not immediately stop. Providers should request Part 8 reviews from supervisory bodies to determine if the restrictions still meet the legal criteria.</li>
+    <li style="margin-bottom: 10px;"><strong>Continue MCA Assessments:</strong> Capacity to make decisions about care and residence must still be assessed. Best interests decision-making remains critical.</li>
+    <li style="margin-bottom: 10px;"><strong>Document "Objection" Carefully:</strong> Objection isn't just a verbal refusal; it includes attempts to leave, physical resistance to care, and the use of restraint or covert medication.</li>
+    <li style="margin-bottom: 10px;"><strong>Beware the "Tick Box" Trap:</strong> The CQC expects providers to demonstrate they are considering DoLS on a case-by-case basis. Ensure any consent or contentment is genuine.</li>
+  </ol>
+
+  <p><em>Navigating these regulatory shifts takes time. If you need support reviewing your current DoLS tracker, updating your safeguarding policies, or ensuring your quality assurance processes align with the AGNI judgment, reach out to <strong>The Remote RM</strong> for expert, remote compliance support.</em></p>
+
+  <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
+
+  <!-- Interactive AGNI DoL Assessor Widget -->
+  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin-top: 0; color: #1a365d;">Interactive Tool: AGNI Multi-Factorial Assessor</h3>
+    <p style="font-size: 0.9em; color: #4a5568; margin-bottom: 20px;">Toggle the criteria below to see how the likelihood of a Deprivation of Liberty shifts under the new AGNI framework compared to the old Cheshire West 'Acid Test'.</p>
+    
+    <form id="dol-form" style="display: flex; flex-direction: column; gap: 12px;">
+      
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px; background: #fff; border: 1px solid #edf2f7; border-radius: 4px;">
+        <input type="checkbox" id="chk-supervision" style="width: 18px; height: 18px;" onchange="calculateDoL()">
+        <span>Is the person under continuous supervision and control?</span>
+      </label>
+      
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px; background: #fff; border: 1px solid #edf2f7; border-radius: 4px;">
+        <input type="checkbox" id="chk-not-free" style="width: 18px; height: 18px;" onchange="calculateDoL()">
+        <span>Is the person NOT free to leave?</span>
+      </label>
+      
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px; background: #fff; border: 1px solid #edf2f7; border-radius: 4px;">
+        <input type="checkbox" id="chk-severe" style="width: 18px; height: 18px;" onchange="calculateDoL()">
+        <span>Are severe restrictions used (e.g., physical/chemical restraint, seclusion)?</span>
+      </label>
+      
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px; background: #fff; border: 1px solid #edf2f7; border-radius: 4px;">
+        <input type="checkbox" id="chk-objecting" style="width: 18px; height: 18px;" onchange="calculateDoL()">
+        <span>Is the person actively objecting or attempting to leave?</span>
+      </label>
+      
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px; background: #fff; border: 1px solid #edf2f7; border-radius: 4px;">
+        <input type="checkbox" id="chk-content" style="width: 18px; height: 18px;" onchange="calculateDoL()">
+        <span>Does the person appear content and settled with their arrangements?</span>
+      </label>
+
+    </form>
+
+    <div style="margin-top: 24px; padding: 16px; background: #fff; border: 2px solid #cbd5e0; border-radius: 6px;" id="result-box">
+      <h4 style="margin: 0 0 12px 0; font-size: 1.1em;">Assessment Results:</h4>
+      
+      <div style="margin-bottom: 12px;">
+        <strong>New AGNI Framework Likelihood:</strong> 
+        <span id="agni-result" style="display: inline-block; padding: 4px 12px; border-radius: 4px; font-weight: bold; background: #e2e8f0; color: #4a5568;">Low</span>
+      </div>
+      
+      <div style="font-size: 0.9em; color: #718096; border-top: 1px dashed #cbd5e0; padding-top: 12px;">
+        <em>Under the old Cheshire West 'Acid Test', this would have been a:</em><br>
+        <strong id="cw-result" style="color: #e53e3e;">No DoL</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculateDoL() {
+      const supervision = document.getElementById('chk-supervision').checked;
+      const notFree = document.getElementById('chk-not-free').checked;
+      const severe = document.getElementById('chk-severe').checked;
+      const objecting = document.getElementById('chk-objecting').checked;
+      const content = document.getElementById('chk-content').checked;
+
+      // Old Cheshire West Logic
+      const cwResult = (supervision && notFree);
+      const cwText = cwResult ? 'Definitive Deprivation of Liberty' : 'No DoL';
+      const cwColor = cwResult ? '#e53e3e' : '#48bb78';
+      
+      const cwEl = document.getElementById('cw-result');
+      cwEl.textContent = cwText;
+      cwEl.style.color = cwColor;
+
+      // New AGNI Logic
+      let agniLikelihood = 'Low';
+      let agniBg = '#e2e8f0';
+      let agniColor = '#4a5568';
+
+      if (severe || objecting) {
+        agniLikelihood = 'High (DoLS Authorisation Likely Required)';
+        agniBg = '#fed7d7';
+        agniColor = '#c53030';
+      } else if (content) {
+        agniLikelihood = 'Low (Valid consent likely present)';
+        agniBg = '#c6f6d5';
+        agniColor = '#2f855a';
+      } else if (supervision && notFree) {
+        agniLikelihood = 'Moderate (Requires deeper contextual assessment)';
+        agniBg = '#feebc8';
+        agniColor = '#c05621';
+      }
+
+      // Update UI
+      const agniEl = document.getElementById('agni-result');
+      agniEl.textContent = agniLikelihood;
+      agniEl.style.backgroundColor = agniBg;
+      agniEl.style.color = agniColor;
+    }
+    
+    // Initialize
+    calculateDoL();
+  </script>
+
+</article>
+
+```
