@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Remote RM | Premium CQC Compliance and Safeguarding Consultancy</title>
+    <title>CQC Governance Reviews & Remote Care Consultancy | The Remote RM</title>
+    <meta name="description" content="Independent remote CQC governance reviews for adult social care providers in England. Clear findings, practical action plans and focused reviews from £450.">
+    <link rel="canonical" href="https://www.theremoterm.co.uk/">
     <style>
         :root {
             --primary: #002d5b;
@@ -82,7 +84,17 @@
             text-align: center;
         }
 
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.15; }
+        .hero .btn-secondary {background:transparent; border:2px solid white; margin-left:12px;}
+        .eyebrow {font-size:.88rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase;}
+        .proof-list {display:flex; flex-wrap:wrap; justify-content:center; gap:12px; list-style:none; padding:0; margin:22px 0 0;}
+        .proof-list li {background:#eaf3fc; color:#002d5b; padding:8px 13px; border-radius:99px; font-weight:650; font-size:.92rem;}
+        .service-price {font-size:1.7rem; color:var(--primary); font-weight:800; margin:.3rem 0;}
+        .subtle {color:#526273;}
+        details {padding:1rem 0; border-bottom:1px solid #dce5ee;}
+        summary {cursor:pointer; font-weight:700; color:var(--primary);}
+        :focus-visible {outline:3px solid #ffba33; outline-offset:3px;}
+        section[id] {scroll-margin-top:120px;}
         .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
 
         .content-box {
@@ -124,7 +136,7 @@
         footer { background: var(--primary); color: white; padding: 4rem 0; text-align: center; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.2rem; }\n            .hero .btn-secondary {margin:12px 0 0;}\n            .hero {padding:75px 0;}\n            .container {padding:0 1rem;}\n            .grid-3 {grid-template-columns:1fr;}
             .content-box { padding: 2rem; }
             .nav-flex { flex-direction: column; gap: 1rem; }
             nav { flex-wrap: wrap; justify-content: center; }
@@ -146,7 +158,7 @@
             <a href="index.html#blog">Blog</a>
             <a href="mentorship.html">Mentorship</a>
             <a href="index.html#contact">Contact</a>
-            <a href="feedback.html">Leave Feedback</a>
+            <a href="sample-report.html">Sample Report</a>
             <a href="pricing.html" class="btn" style="margin-left: 1.5rem;">View Packages</a>
         </nav>
     </div>
@@ -154,21 +166,62 @@
 
 <section class="hero">
     <div class="container">
-        <h1>CQC Compliance and Safeguarding Expertise. Zero Disruption.</h1>
-        <p>Expert-led remote support for care providers who want excellence without the on-site footprint.</p>
-        <a href="#contact" class="btn" style="padding: 1rem 2.5rem;">Enquire Now</a>
+        <p class="eyebrow">Independent CQC governance support · England-wide</p>
+        <h1>Know Where Your Care Service Stands Before Your Next CQC Assessment.</h1>
+        <p>Independent remote governance reviews for adult social care providers. Identify potential gaps, strengthen your evidence and prioritise practical improvements.</p>
+        <a href="#contact" class="btn" style="padding: 1rem 1.6rem;">Request a Free 15-Minute Introductory Call</a>
+        <a href="#services" class="btn btn-secondary" style="padding: 1rem 1.6rem;">Explore Reviews & Prices</a>
+        <p style="font-size:.95rem; margin:1.2rem auto 0;">Remote across England · Targeted reviews £450 · No obligation to enquire</p>
     </div>
 </section>
 
 <div class="container">
-    <!-- About/Elevator Pitch Section -->
     <section class="content-box" id="about">
-        <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="border: none; padding: 0;">Expertise Forged in the NHS. Proven in Private Care.</h2>
-            <p style="font-size: 1.15rem;">The Remote RM brings a unique blend of crisis-level command precision, strategic governance, and CQC-registered leadership directly to your care service.</p>
-            <p style="color: #555; margin-bottom: 2rem;">Rooted in real-world experience building care operations in CQC inspection standards from the ground up, we help health and social care providers systematically map out their regulatory pathways while protecting staff and resident routines.</p>
-            <a href="about.html" class="btn">Read Our Full Story →</a>
+        <div style="max-width:850px;margin:0 auto;text-align:center">
+            <h2 style="border:none;padding:0;">Regulatory Experience. Real Care Leadership.</h2>
+            <p>The Remote RM is led by Sam Jones, a former CQC Nominated Individual, Registered Manager and care business owner with senior NHS operational leadership experience.</p>
+            <ul class="proof-list">
+                <li>Former CQC Nominated Individual</li><li>Former Registered Manager</li><li>Care business ownership</li><li>NHS operational leadership</li>
+            </ul>
+            <p class="subtle">Get a focused, independent view of your governance evidence without an unnecessary on-site visit. Remote reviews have defined limitations and are not CQC inspections.</p>
+            <a href="about.html">Meet the founder and learn about the approach →</a>
         </div>
+    </section>
+
+    <section class="content-box" id="services">
+        <h2>Choose the Right Level of Support</h2>
+        <p class="subtle">Clear scope, practical findings and an agreed written quotation before work begins.</p>
+        <div class="grid-3">
+            <div class="inner-card">
+                <p class="eyebrow">A focused starting point</p>
+                <h3>Targeted Governance Review</h3>
+                <p class="service-price">£450</p>
+                <p>Remote review of up to three agreed policies or audits, a relevant CQC assessment area, a one-hour feedback video call and a high-level findings report.</p>
+                <a class="btn" href="#contact">Discuss a Targeted Review</a>
+            </div>
+            <div class="inner-card">
+                <p class="eyebrow">Broader assurance</p>
+                <h3>Comprehensive Remote Audit</h3>
+                <p class="service-price">£1,250</p>
+                <p>A structured remote review across the five CQC key questions using agreed evidence, management discussion and an action-plan report. It cannot guarantee a rating.</p>
+                <a class="btn" href="#contact">Discuss an Audit</a>
+            </div>
+            <div class="inner-card">
+                <p class="eyebrow">Tailored to your organisation</p>
+                <h3>Ongoing & Bespoke Support</h3>
+                <p class="service-price">Quoted individually</p>
+                <p>Monthly governance support, policy design, training content or mentoring, scoped to your needs and availability.</p>
+                <a class="btn" href="pricing.html">View All Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box" id="example">
+        <h2>See the Kind of Report You'll Receive</h2>
+        <p>Understand how observations, priorities and recommended actions can be presented before commissioning a review.</p>
+        <p><strong>Illustrative example:</strong> Governance actions are recorded, but owners and completion evidence are not consistently documented. <strong>Priority:</strong> High. <strong>Suggested action:</strong> Assign accountable leads and review evidence of completion monthly.</p>
+        <a href="sample-report.html" class="btn">View Fictional Sample Report</a>
+        <p class="subtle" style="font-size:.9rem">The example uses fictional information; no real client results are represented.</p>
     </section>
 
     <!-- The Remote Advantage Section -->
@@ -258,57 +311,45 @@
             
         </div>
     </section>
-    <!-- Services Section -->
-    <section class="content-box" id="services">
-        <h2>Specialist Consultancy Services</h2>
-        <p style="margin-bottom: 2rem; color: #555;">We deliver high-impact regulatory resources, structural guidance, and educational materials built to protect your rating and upskill your leaders.</p>
-        
-        <div class="grid-3">
-            <div class="inner-card">
-                <h3>Mock Inspections & SAF Audits</h3>
-                <p>Meticulous digital validation of your evidence base to catch hidden operational risks well ahead of formal CQC inspections.</p>
-            </div>
-            <div class="inner-card">
-                <h3>Policy Writing & Framework Reviews</h3>
-                <p>Drafting bespoke, compliant organizational policies or conducting comprehensive legislative updates to align existing frameworks with changing safeguarding rules.</p>
-            </div>
-            <div class="inner-card">
-                <h3>Course Writing & Assessment Design</h3>
-                <p>Development of clear, industry-grade training packages, curriculum structures, and highly valid exam or knowledge-check questions engineered specifically for care professionals.</p>
-            </div>
-        </div>
+    <section class="content-box" id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <details><summary>Can the review be carried out remotely?</summary><p>Yes, within an agreed document-review and remote-discussion scope. Where evidence needs on-site verification, that limitation will be identified.</p></details>
+        <details><summary>Will this guarantee a CQC rating?</summary><p>No. These are independent advisory reviews, not CQC inspections. Only CQC determines its assessment outcomes.</p></details>
+        <details><summary>Do I need to send care records through this website?</summary><p>No. Do not share confidential records or personal details in the enquiry form. Any necessary evidence transfer will be agreed separately using an appropriate secure process.</p></details>
+        <details><summary>What happens after I enquire?</summary><p>We discuss what you need, confirm suitability and agree the scope, costs and delivery timetable in writing before any work begins.</p></details>
+        <details><summary>What will I receive?</summary><p>The deliverables depend on the package: the targeted review includes a feedback meeting and summary findings; the comprehensive review includes an action-plan report and follow-up consultation.</p></details>
     </section>
 
     <!-- Contact Form -->
     <section class="content-box" id="contact">
-        <h2 style="text-align: center; border: none; padding: 0;">Request Your Consultation</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">We typically respond to all regulatory and design inquiries within 24 hours.</p>
+        <h2 style="text-align: center; border: none; padding: 0;">Request a Free 15-Minute Introductory Call</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Tell us a little about your service and what you need. There is no obligation to buy.</p>
         
         <div style="max-width: 600px; margin: 0 auto;">
-            <form action="https://formspree.io/f/meelbgwn" method="POST">
-                <label>Name</label>
-                <input type="text" name="name" class="form-control" required placeholder="Full Name">
+            <form action="https://formspree.io/f/meelbgwn" method="POST">\n                <input type="hidden" name="_subject" value="The Remote RM website enquiry">
+                <label for="lead-name">Name</label>
+                <input id="lead-name" type="text" name="name" class="form-control" required placeholder="Full Name">
                 
-                <label>Care Service / Organization</label>
-                <input type="text" name="company" class="form-control" required placeholder="Organization Name">
+                <label for="lead-company">Care Service / Organisation</label>
+                <input id="lead-company" type="text" name="company" class="form-control" required placeholder="Organization Name">
                 
-                <label>Email Address</label>
-                <input type="email" name="email" class="form-control" required placeholder="manager@service.co.uk">
+                <label for="lead-email">Email Address</label>
+                <input id="lead-email" type="email" name="email" class="form-control" required placeholder="manager@service.co.uk">
                 
-                <label>How can we help?</label>
-                <select name="type" class="form-control">
-                    <option value="Mock Inspections & SAF Audits">Mock Inspections & SAF Audits</option>
+                <label for="lead-type">What would you like to discuss?</label>
+                <select id="lead-type" name="type" class="form-control">
+                    <option value="Targeted Governance Review - 450">Targeted Governance Review (£450)</option>\n                    <option value="Comprehensive Remote Audit - 1250">Comprehensive Remote Audit (£1,250)</option>
                     <option value="Policy Writing & Framework Reviews">Policy Writing & Framework Reviews</option>
                     <option value="Course Writing & Assessment Design">Course Writing & Assessment Design</option>
                     <option value="Registered Manager Mentorship">Registered Manager Mentorship</option>
                     <option value="CQC Registration Support">CQC Registration Support</option>
                 </select>
                 
-                <label>Details</label>
+                <label for="lead-message">A little about your requirements</label>
                 <p style="font-size: 0.9rem; color: #555;">Please do not include names or other identifying details about people who use your service, or paste confidential care records here. If a document review is needed, we will agree a secure transfer method with you before you send any records.</p>
-                <textarea name="message" class="form-control" rows="5" required placeholder="Briefly describe your requirements without including identifiable service-user information..."></textarea>
+                <textarea id="lead-message" name="message" class="form-control" rows="5" required placeholder="Briefly describe your requirements without including identifiable service-user information..."></textarea>
                 
-                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+                <button type="submit" class="btn" style="width: 100%;">Request an Introductory Call</button>
             </form>
         </div>
     </section>
